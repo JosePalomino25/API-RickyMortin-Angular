@@ -1,11 +1,10 @@
 // Navbar styles
 .navbar {
-  background-color: #7DDC00;
+  background-color: #336B87;
   color: white;
   margin: -8px;
 
   .container {
-    display: flex;
     align-items: center;
 
     .navbar-brand {
@@ -34,20 +33,22 @@
   }
 }
 
-// Main container
 .container {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
-// Navbar styles
+
+.container-navbar{
+  display: flex;
+}
+
 .navbar {
-  background-color: #7DDC00;
+  background-color:#336B87;
   color: black;
   padding: 1rem 0;
 
   .container {
-    display: flex;
     align-items: center;
 
     .navbar-brand {
@@ -60,29 +61,23 @@
   }
 }
 
-// Main container
 .container {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-// Grid layout for characters
-.character-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
 
 // Character card styles
 .character-card {
-  background-color: #D4EACF;
+  background-color: #2A3132;
   border-radius: 15px;
   border: 3px solid black;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 200px;
 
   &:hover {
     transform: translateY(-5px);
@@ -101,13 +96,13 @@
     h3 {
       margin: 0;
       font-size: 1.2rem;
-      color: #34495e;
+      color: white;
     }
 
     p {
       margin: 0.5rem 0;
       font-size: 0.9rem;
-      color: #7f8c8d;
+      color: white;
 
       span {
         font-weight: bold;
@@ -130,20 +125,37 @@ span {
     color: #f1c40f;
   }
 }
+
+.character-grid {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 @media (max-width: 600px) {
   .navbar{
     text-align: center;
     justify-content: center;
   }
+
+  .character-grid {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
   .container{
-    display: block;
     text-align: center;
     align-items: center;
     justify-content: center;
   }
 
   .navbar .container {
-    display: block;
     text-align: center;
   }
 
@@ -153,13 +165,8 @@ span {
     margin-top: 1rem;
   }
 
-  .character-grid {
-    display: block;
-    align-items: center;
-  }
-
   .character-card {
-    display: block;
+    width: 400px;
     flex-direction: column;
     img {
       height: 180px;

@@ -1,13 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RickAndMortyService } from './rick-and-morty.service';
+import {Character} from "@app/character-interface";
 
-export interface Character {
-  name: string;
-  status: string;
-  species: string;
-  image: string;
-  gender: string;
-}
 
 @Component({
   selector: 'app-root',
@@ -20,8 +14,7 @@ export class AppComponent implements OnInit {
   constructor(private rickAndMortyService: RickAndMortyService) {}
 
   ngOnInit(): void {
-    const results: Character[] = [];
-    this.rickAndMortyService.getCharacters().subscribe((data) => {
+    this.rickAndMortyService.getCharacters().subscribe((data ) => {
       this.characters = data.results;
     });
   }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Character} from "@app/app.component";
+import {Character} from "@app/character-interface";
 import {environment} from "@environment/environment";
 
 @Injectable({
@@ -19,6 +19,5 @@ export class RickAndMortyService {
   }
 }
 
-// Usar interfaz y no traer de tipo any
 // Mejorar diseño responsive y correcciones de vista.
 // Uso de environments
